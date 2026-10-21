@@ -24,10 +24,8 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // more_icon = menu icon in the toolbar
+        
         pop = findViewById(R.id.more_icon);
-
-        // text descriptions
 
         t = findViewById(R.id.textView);
         t2 = findViewById(R.id.textView2);
@@ -42,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // when clicked on the text
+        // clicking on the text
         t.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // when click on menu icon
+        // clicking on menu icon
         pop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
     private void showFloating(View v) {
         PopupMenu pop = new PopupMenu(MainActivity.this, v);
         pop.getMenuInflater().inflate(R.menu.floating_menu, pop.getMenu());
-        // onclick listener
         pop.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -98,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
     // pop up menu
     private void showMenu(View v) {
-        // declare popup object
+        // popup object
         PopupMenu pop = new PopupMenu(MainActivity.this, v);
         pop.getMenuInflater().inflate(R.menu.popup_menu, pop.getMenu());
         pop.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
